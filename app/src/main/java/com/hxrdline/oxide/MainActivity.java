@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
     private void startOverlay() {
         pendingOverlay = false;
         Intent i = new Intent(this, OverlayService.class);
-        if (Build.VERSION.SDK_INT >= 26) startForegroundService(i); else startService(i);
+        startService(i);
     }
 
     @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
